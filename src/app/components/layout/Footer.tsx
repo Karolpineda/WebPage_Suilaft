@@ -15,7 +15,7 @@ export function Footer() {
                 <span className="text-[#0A1020] font-bold text-xl">M</span>
               </div>
               <div>
-                <span className="text-xl font-bold text-[#EAF2FF]">MySoft</span>
+                <span className="text-xl font-bold text-[#EAF2FF]">Suilaft</span>
                 <p className="text-xs text-[#AFC3E0] -mt-0.5">by Grupo Consulteg</p>
               </div>
             </div>
@@ -116,8 +116,8 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-[#AFC3E0] text-sm">Email</p>
-                  <a href="mailto:info@mysoft.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
-                    info@mysoft.com
+                  <a href="mailto:info@Suilaft.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
+                    info@Suilaft.com
                   </a>
                 </div>
               </li>
@@ -146,7 +146,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#223252] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#AFC3E0] text-sm">
-            © {currentYear} MySoft. Todos los derechos reservados. | Powered by Grupo Consulteg
+            © {currentYear} Suilaft. Todos los derechos reservados. | Powered by Grupo Consulteg
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-[#AFC3E0] hover:text-[#00AEEF] text-sm transition-colors">

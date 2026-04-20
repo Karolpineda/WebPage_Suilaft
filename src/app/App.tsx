@@ -1,6 +1,12 @@
 import { RouterProvider } from 'react-router';
 import { router } from './routes';
+import SplashScreen from './components/ui/SplashScreen';
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <SplashScreen />
+      <RouterProvider router={router} />
+    </>
+  );
 }

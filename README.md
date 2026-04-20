@@ -2,9 +2,9 @@
 # WebPage_Suilaft
 =======
 
-  # Diseño web corporativo MySoft
+  # Diseño web corporativo Suilaft
 
-  This is a code bundle for Diseño web corporativo MySoft. The original project is available at https://www.figma.com/design/ivxJj6qTZvfuxeHMDlya1L/Dise%C3%B1o-web-corporativo-MySoft.
+  This is a code bundle for Diseño web corporativo Suilaft. The original project is available at https://www.figma.com/design/ivxJj6qTZvfuxeHMDlya1L/Dise%C3%B1o-web-corporativo-Suilaft.
 
   ## Running the code
 

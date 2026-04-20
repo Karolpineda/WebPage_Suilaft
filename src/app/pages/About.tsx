@@ -50,7 +50,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2010', title: 'Fundación de MySoft', description: 'Inicio de operaciones respaldados por Grupo Consulteg', icon: '🚀' },
+  { year: '2010', title: 'Fundación de Suilaft', description: 'Inicio de operaciones respaldados por Grupo Consulteg', icon: '🚀' },
   { year: '2014', title: 'Primera Suite SUILAFT', description: 'Lanzamiento de soluciones de compliance', icon: '🛡️' },
   { year: '2018', title: '100+ Clientes', description: 'Alcanzamos presencia en múltiples industrias', icon: '🏆' },
   { year: '2021', title: 'Integración de IA', description: 'Incorporamos inteligencia artificial en nuestras soluciones', icon: '🤖' },
@@ -101,7 +101,7 @@ export default function About() {
                 animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
-              <span className="text-[#00AEEF] text-sm font-medium">Sobre MySoft</span>
+              <span className="text-[#00AEEF] text-sm font-medium">Sobre Suilaft</span>
             </motion.div>
 
             <motion.h1
@@ -144,7 +144,7 @@ export default function About() {
               </h2>
               <div className="space-y-5 text-[#AFC3E0] leading-relaxed">
                 <p>
-                  MySoft nació en 2010 como la división tecnológica de{' '}
+                  Suilaft nació en 2010 como la división tecnológica de{' '}
                   <strong className="text-[#00AEEF]">Grupo Consulteg</strong>, con la misión de llevar
                   transformación digital a empresas que buscaban innovar y optimizar sus procesos operativos.
                 </p>
@@ -471,7 +471,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', stiffness: 90, damping: 22, delay: 0.2 }}
               >
-                Únete a las empresas que confían en MySoft para su transformación digital.
+                Únete a las empresas que confían en Suilaft para su transformación digital.
               </motion.p>
               <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"

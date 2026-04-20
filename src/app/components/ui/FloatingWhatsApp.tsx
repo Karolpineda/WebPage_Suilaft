@@ -4,7 +4,7 @@ import { useState } from 'react';
 export function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
   const phoneNumber = '1234567890'; // Número de WhatsApp
-  const message = '¡Hola! Me interesa conocer más sobre las soluciones de MySoft.';
+  const message = '¡Hola! Me interesa conocer más sobre las soluciones de Suilaft.';
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -38,7 +38,7 @@ export function FloatingWhatsApp() {
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-semibold">MySoft</h3>
+                <h3 className="text-white font-semibold">Suilaft</h3>
                 <p className="text-white/80 text-xs">Disponible ahora</p>
               </div>
             </div>

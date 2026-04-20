@@ -250,7 +250,7 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-[#EAF2FF] mb-6">Información de Contacto</h2>
                 <div className="space-y-5">
                   {[
-                    { icon: Mail, title: 'Email', lines: [{ text: 'info@mysoft.com', href: 'mailto:info@mysoft.com' }, { text: 'ventas@mysoft.com', href: 'mailto:ventas@mysoft.com' }] },
+                    { icon: Mail, title: 'Email', lines: [{ text: 'info@Suilaft.com', href: 'mailto:info@Suilaft.com' }, { text: 'ventas@Suilaft.com', href: 'mailto:ventas@Suilaft.com' }] },
                     { icon: Phone, title: 'Teléfono', lines: [{ text: '+1 (234) 567-890', href: 'tel:+1234567890' }, { text: '+1 (234) 567-891', href: 'tel:+1234567891' }] },
                     { icon: MapPin, title: 'Ubicación', lines: [{ text: 'Av. Principal 123, Edificio Corporativo, Ciudad, País', href: null }] },
                   ].map(({ icon: Icon, title, lines }, i) => (

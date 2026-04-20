@@ -286,7 +286,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why MySoft Section */}
+      {/* Why Suilaft Section */}
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -301,7 +301,7 @@ export default function Home() {
               <span className="text-[#1E4ED8] text-sm font-medium">Por qué elegirnos</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold text-[#EAF2FF] mb-4">
-              ¿Por qué MySoft?
+              ¿Por qué Suilaft?
             </motion.h2>
             <motion.p variants={fadeUp} className="text-xl text-[#AFC3E0] max-w-2xl mx-auto">
               Más que tecnología, somos tu socio estratégico en transformación digital

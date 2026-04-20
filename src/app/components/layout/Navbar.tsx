@@ -43,7 +43,7 @@ export function Navbar() {
               <div className="absolute -inset-1 bg-gradient-to-br from-[#00AEEF]/20 to-[#1E4ED8]/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
             </div>
             <div>
-              <span className="text-2xl font-bold text-[#EAF2FF] tracking-tight">MySoft</span>
+              <span className="text-2xl font-bold text-[#EAF2FF] tracking-tight">Suilaft</span>
               <p className="text-xs text-[#AFC3E0] -mt-1">powered by Grupo Consulteg</p>
             </div>
           </Link>

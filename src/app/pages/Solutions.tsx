@@ -158,7 +158,7 @@ export default function Solutions() {
                 </Button>
               </Link>
               <Link to="/nosotros">
-                <Button variant="secondary" size="lg">Conocer MySoft</Button>
+                <Button variant="secondary" size="lg">Conocer Suilaft</Button>
               </Link>
             </motion.div>
           </motion.div>
@@ -351,7 +351,7 @@ export default function Solutions() {
                   </Button>
                 </Link>
                 <Link to="/nosotros">
-                  <Button variant="secondary" size="lg">Conocer más de MySoft</Button>
+                  <Button variant="secondary" size="lg">Conocer más de Suilaft</Button>
                 </Link>
               </motion.div>
             </div>
