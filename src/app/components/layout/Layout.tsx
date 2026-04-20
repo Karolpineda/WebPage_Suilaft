@@ -3,6 +3,7 @@ import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { FloatingWhatsApp } from '../ui/FloatingWhatsApp';
 import ScrollToTop from './ScrollToTop';
+import PageTransition from './PageTransition';
 
 export function Layout() {
   return (
@@ -10,7 +11,9 @@ export function Layout() {
       <Navbar />
       <ScrollToTop />
       <main className="pt-20">
-        <Outlet />
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
       </main>
       <Footer />
       <FloatingWhatsApp />

@@ -185,7 +185,7 @@ export default function About() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <motion.div
-                className="bg-gradient-to-br from-[#101A33] to-[#0D1526] border border-[#223252] rounded-2xl p-8 hover:border-[#00AEEF]/30 transition-colors duration-500"
+                className="bg-gradient-to-br from-[#101A33] to-[#0D1526] border border-[#223252] rounded-2xl p-8 hover:border-[#00AEEF]/30 transition-colors duration-500 card-elevated"
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               >
@@ -279,7 +279,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold">Asistente IA — Análisis de datos en vivo</h3>
               </div>
               
-              <div className="bg-[#101A33] border border-[#223252] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="bg-[#101A33] border border-[#223252] rounded-2xl overflow-hidden shadow-2xl card-elevated">
                 {/* Chat Header */}
                 <div className="bg-[#101A33] border-b border-[#223252] p-4 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#00AEEF] flex items-center justify-center text-white font-bold">
@@ -350,7 +350,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold">Flujo n8n — Automatización inteligente</h3>
               </div>
 
-              <div className="bg-[#0F172A] border border-[#223252] rounded-2xl p-8 relative overflow-hidden shadow-2xl h-[445px]">
+              <div className="bg-[#0F172A] border border-[#223252] rounded-2xl p-8 relative overflow-hidden shadow-2xl h-[445px] card-elevated">
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></div>
