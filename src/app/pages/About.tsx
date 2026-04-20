@@ -227,80 +227,286 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-24 relative overflow-hidden">
+      {/* IA & Automation Section */}
+      <section className="py-24 relative overflow-hidden bg-[#0A1020]">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A1020] via-[#101A33]/20 to-[#0A1020]" />
-          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[600px] bg-[#00AEEF]/4 blur-[120px]" />
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#00AEEF]/5 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1E4ED8]/5 rounded-full blur-[100px]" />
         </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="text-center mb-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={container}
-          >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 bg-[#1E4ED8]/10 border border-[#1E4ED8]/20 rounded-full mb-4">
-              <span className="text-[#1E4ED8] text-sm font-medium">Trayectoria</span>
-            </motion.div>
-            <motion.h2 className="text-4xl md:text-5xl font-bold text-[#EAF2FF] mb-4" variants={fadeUp}>
-              Nuestra Trayectoria
-            </motion.h2>
-            <motion.p className="text-xl text-[#AFC3E0]" variants={fadeUp}>
-              Hitos importantes en nuestro camino de innovación
-            </motion.p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Center line */}
-            <motion.div
-              className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-transparent via-[#00AEEF]/40 to-transparent"
-              initial={{ height: 0 }}
-              whileInView={{ height: '100%' }}
+          <div className="text-center mb-16">
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: 'easeInOut' }}
-              style={{ top: 0 }}
-            />
+              className="text-[#00AEEF] text-sm font-semibold tracking-wider uppercase mb-4 block"
+            >
+              Innovación en Acción
+            </motion.span>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold text-white mb-6"
+            >
+              IA y Automatización trabajando <span className="text-[#AFC3E0]">para ti</span>
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-lg text-[#AFC3E0] max-w-3xl mx-auto"
+            >
+              Mira en tiempo real cómo nuestra inteligencia artificial y los flujos de n8n pueden transformar tus procesos empresariales.
+            </motion.p>
+          </div>
 
-            <div className="space-y-16">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={index}
-                  className={`relative flex items-center gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ type: 'spring', stiffness: 80, damping: 22, delay: 0.1 }}
-                >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                    <motion.div
-                      className="bg-[#101A33] border border-[#223252] rounded-xl p-6 group hover:border-[#00AEEF]/40 transition-all duration-300 inline-block w-full lg:max-w-sm"
-                      whileHover={{ y: -4, boxShadow: '0 20px 40px rgba(0,174,239,0.12)' }}
-                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* AI Assistant Card */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="flex items-center gap-3 text-[#EAF2FF] mb-4">
+                <div className="p-2 bg-[#00AEEF]/10 rounded-lg">
+                  <span className="text-xl">💬</span>
+                </div>
+                <h3 className="text-xl font-semibold">Asistente IA — Análisis de datos en vivo</h3>
+              </div>
+              
+              <div className="bg-[#101A33] border border-[#223252] rounded-2xl overflow-hidden shadow-2xl">
+                {/* Chat Header */}
+                <div className="bg-[#101A33] border-b border-[#223252] p-4 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#00AEEF] flex items-center justify-center text-white font-bold">
+                    <span className="text-xs">🤖</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white text-sm font-semibold">Asistente IA MySoft</h4>
+                    <span className="text-xs text-[#10B981] flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-[#10B981] rounded-full animate-pulse"></span>
+                      En línea — conectado a tus datos
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Chat Body */}
+                <div className="p-6 space-y-4 h-[350px] overflow-y-auto">
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="flex gap-3"
+                  >
+                    <div className="flex-1 bg-[#1E293B] rounded-2xl p-4 border border-[#334155]">
+                      <p className="text-[#E2E8F0] text-sm leading-relaxed">
+                        Claro. Tus ventas del Q1 crecieron un 23% respecto al trimestre anterior. Los productos con mayor rotación fueron ERP MySoft (+35%) y SUILAF (+18%). ¿Quieres un desglose por región?
+                      </p>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div 
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.5 }}
+                    className="flex justify-end gap-3"
+                  >
+                    <div className="bg-[#1E4ED8] text-white rounded-2xl p-4 shadow-lg max-w-[80%]">
+                      <p className="text-sm font-medium">Sí, y genera un reporte automático</p>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 2.5 }}
+                    className="flex gap-3"
+                  >
+                    <div className="flex-1 bg-[#1E293B] rounded-2xl p-4 border border-[#334155]">
+                      <p className="text-[#E2E8F0] text-sm leading-relaxed">
+                        Listo. He generado el reporte y lo envié a tu correo. También programé un resumen semanal automático vía n8n. ¿Necesitas algo más?
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* n8n Workflow Card */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="flex items-center gap-3 text-[#EAF2FF] mb-4">
+                <div className="p-2 bg-[#7C3AED]/10 rounded-lg">
+                  <span className="text-xl">⚙️</span>
+                </div>
+                <h3 className="text-xl font-semibold">Flujo n8n — Automatización inteligente</h3>
+              </div>
+
+              <div className="bg-[#0F172A] border border-[#223252] rounded-2xl p-8 relative overflow-hidden shadow-2xl h-[445px]">
+                <div className="flex justify-between items-center mb-8">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></div>
+                    <span className="text-xs font-semibold text-[#10B981]">Activo</span>
+                  </div>
+                  <div className="px-3 py-1 bg-[#223252] rounded-full text-[10px] text-white/60">Flujo de Automatización n8n</div>
+                </div>
+
+                {/* Workflow Visualization with real animations */}
+                <div className="relative h-40 flex items-center justify-center">
+                  <div className="relative flex items-center justify-center gap-6">
+                    {/* Trigger */}
+                    <div className="flex flex-col items-center gap-2 relative">
+                      <motion.div 
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        className="w-14 h-14 bg-[#00AEEF]/20 rounded-xl border border-[#00AEEF]/40 flex items-center justify-center relative z-10"
+                      >
+                        <span className="text-2xl">⚡</span>
+                      </motion.div>
+                      <span className="text-[10px] text-[#AFC3E0]">Trigger</span>
+                      
+                      {/* Floating label for new lead */}
+                      <motion.div 
+                        animate={{ y: [0, -10, 0], opacity: [0, 1, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                        className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#223252] border border-[#334155] rounded px-2 py-0.5 whitespace-nowrap"
+                      >
+                        <span className="text-[8px] text-white">Nuevo lead recibido</span>
+                      </motion.div>
+                    </div>
+
+                    {/* Animated Line 1 */}
+                    <div className="w-12 h-0.5 bg-[#223252] relative">
+                      <motion.div 
+                        animate={{ left: ['0%', '100%'], opacity: [0, 1, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                        className="absolute top-0 w-4 h-full bg-[#00AEEF] blur-[2px]"
+                      />
+                    </div>
+
+                    {/* IA Center Node */}
+                    <div className="flex flex-col items-center gap-2 relative">
+                      <motion.div 
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                        className="w-16 h-16 bg-[#7C3AED]/20 rounded-xl border border-[#7C3AED]/40 flex items-center justify-center relative z-10"
+                      >
+                        <motion.div 
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                          className="absolute inset-0 border-2 border-dashed border-[#7C3AED]/30 rounded-xl"
+                        />
+                        <span className="text-3xl">🧠</span>
+                      </motion.div>
+                      <span className="text-[10px] text-white font-medium">IA MySoft</span>
+                      
+                      {/* Processing label */}
+                      <motion.div 
+                        animate={{ opacity: [0, 1, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
+                        className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#7C3AED]/30 border border-[#7C3AED]/50 rounded px-2 py-0.5 whitespace-nowrap"
+                      >
+                        <span className="text-[8px] text-white">Analizando sentimiento</span>
+                      </motion.div>
+                    </div>
+
+                    {/* Flow Splitter */}
+                    <div className="relative w-8 h-20 -mr-4">
+                       <svg className="absolute inset-0 w-full h-full overflow-visible">
+                          <motion.path 
+                            d="M0,40 C10,40 20,40 30,10" 
+                            stroke="#334155" strokeWidth="2" fill="none"
+                            animate={{ stroke: ["#334155", "#00AEEF", "#334155"] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                          />
+                          <motion.path 
+                            d="M0,40 C10,40 20,40 30,70" 
+                            stroke="#334155" strokeWidth="2" fill="none"
+                            animate={{ stroke: ["#334155", "#7C3AED", "#334155"] }}
+                            transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                          />
+                       </svg>
+                    </div>
+
+                    {/* End Nodes */}
+                    <div className="flex flex-col gap-6">
+                      <motion.div 
+                        initial={{ opacity: 0, x: 10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.2 }}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="w-10 h-10 bg-[#1E293B] rounded-lg border border-[#334155] flex items-center justify-center relative">
+                          <span className="text-xl">📁</span>
+                          <motion.div 
+                            animate={{ scale: [1, 1.2, 1], opacity: [0, 1, 0] }}
+                            transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+                            className="absolute -top-6 left-full ml-1 bg-[#10B981]/20 border border-[#10B981]/30 rounded px-1.5 py-0.5 whitespace-nowrap"
+                          >
+                            <span className="text-[8px] text-[#10B981]">Guardar en base</span>
+                          </motion.div>
+                        </div>
+                        <span className="text-[10px] text-[#AFC3E0]">CRM</span>
+                      </motion.div>
+                      
+                      <motion.div 
+                        initial={{ opacity: 0, x: 10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.4 }}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="w-10 h-10 bg-[#1E293B] rounded-lg border border-[#334155] flex items-center justify-center">
+                          <span className="text-xl">📧</span>
+                        </div>
+                        <span className="text-[10px] text-[#AFC3E0]">Email</span>
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Automation Stats */}
+                <div className="mt-12 grid grid-cols-3 gap-4 border-t border-[#223252] pt-8">
+                  <div className="text-center">
+                    <motion.div 
+                      key="stat1"
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="text-xl font-bold text-white leading-none"
                     >
-                      <div className="text-3xl mb-3">{milestone.icon}</div>
-                      <div className="text-3xl font-bold text-[#00AEEF] mb-2">{milestone.year}</div>
-                      <h3 className="text-xl font-semibold text-[#EAF2FF] mb-2">{milestone.title}</h3>
-                      <p className="text-[#AFC3E0] text-sm">{milestone.description}</p>
+                      1,247
                     </motion.div>
+                    <div className="text-[10px] text-[#AFC3E0] mt-1">Ejecuciones hoy</div>
                   </div>
-
-                  {/* Center dot */}
-                  <div className="hidden lg:flex flex-col items-center relative z-10">
-                    <motion.div
-                      className="w-5 h-5 rounded-full bg-gradient-to-br from-[#00AEEF] to-[#1E4ED8] border-4 border-[#0A1020] shadow-lg shadow-[#00AEEF]/40"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.3 }}
-                    />
+                  <div className="text-center">
+                    <motion.div 
+                      key="stat2"
+                      className="text-xl font-bold text-[#00AEEF] leading-none"
+                    >
+                      18h
+                    </motion.div>
+                    <div className="text-[10px] text-[#AFC3E0] mt-1">Tiempo ahorrado</div>
                   </div>
-
-                  <div className="flex-1 hidden lg:block" />
-                </motion.div>
-              ))}
-            </div>
+                  <div className="text-center">
+                    <motion.div 
+                      key="stat3"
+                      className="text-xl font-bold text-white leading-none"
+                    >
+                      97.3%
+                    </motion.div>
+                    <div className="text-[10px] text-[#AFC3E0] mt-1">Precisión IA</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
