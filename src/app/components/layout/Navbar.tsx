@@ -12,7 +12,7 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -26,11 +26,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-[#0A1020]/95 backdrop-blur-lg border-b border-[#223252]/50 shadow-lg'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -38,9 +37,9 @@ export function Navbar() {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="w-20 h-20 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                <img 
-                  src="/logo-suilaft.png" 
-                  alt="Suilaft Logo" 
+                <img
+                  src="/logo-suilaft.png"
+                  alt="Suilaft Logo"
                   className="w-full h-full object-contain filter brightness-110"
                 />
               </div>
@@ -57,17 +56,15 @@ export function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors relative group ${
-                  location.pathname === link.path
+                className={`text-sm font-medium transition-colors relative group ${location.pathname === link.path
                     ? 'text-[#00AEEF]'
                     : 'text-[#AFC3E0] hover:text-[#EAF2FF]'
-                }`}
+                  }`}
               >
                 {link.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-[#00AEEF] transition-all duration-300 ${
-                    location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-[#00AEEF] transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
                 />
               </Link>
             ))}
@@ -75,11 +72,6 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/contacto">
-              <Button variant="secondary" size="sm">
-                Cotizar
-              </Button>
-            </Link>
             <Link to="/contacto">
               <Button variant="primary" size="sm">
                 Ver demo
@@ -104,21 +96,15 @@ export function Navbar() {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-4 py-2 rounded-lg transition-colors ${
-                  location.pathname === link.path
+                className={`block px-4 py-2 rounded-lg transition-colors ${location.pathname === link.path
                     ? 'text-[#00AEEF] bg-[#00AEEF]/10'
                     : 'text-[#AFC3E0] hover:text-[#EAF2FF] hover:bg-[#101A33]'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
             ))}
             <div className="px-4 pt-4 flex flex-col gap-3">
-              <Link to="/contacto" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button variant="secondary" size="md" className="w-full">
-                  Cotizar
-                </Button>
-              </Link>
               <Link to="/contacto" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="primary" size="md" className="w-full">
                   Ver demo
