@@ -53,9 +53,9 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-3 flex-shrink-0 w-full snap-center">
+    <div className="flex flex-col items-center gap-3">
       {/* Phone — smaller on mobile */}
-      <div className="relative w-[180px] h-[368px] sm:w-[220px] sm:h-[450px] bg-[#0A1020] rounded-[2rem] border-[4px] border-[#223252] shadow-[0_0_30px_rgba(0,174,239,0.15)] overflow-hidden group mx-auto">
+      <div className="relative w-[180px] h-[368px] sm:w-[220px] sm:h-[450px] lg:w-[220px] lg:h-[450px] bg-[#0A1020] rounded-[2rem] border-[4px] border-[#223252] shadow-[0_0_30px_rgba(0,174,239,0.15)] overflow-hidden group">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-[#223252] rounded-b-lg z-20" />
 
         <div className="absolute inset-0 z-10 cursor-pointer" onClick={togglePlay}>
@@ -200,7 +200,7 @@ export function ServiceVideos() {
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {serviceVideos.map((video, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
+                  <div key={index} className="w-full flex-shrink-0 snap-center flex justify-center">
                     <PhoneVideo {...video} />
                   </div>
                 ))}
