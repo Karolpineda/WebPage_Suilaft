@@ -18,16 +18,18 @@ import {
   Factory,
   Receipt,
   Star,
-  Sparkles
+  Sparkles,
+  Flower
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { ProductCard } from '../components/ui/ProductCard';
 import { FeatureCard } from '../components/ui/FeatureCard';
 import { AnimatedCounter } from '../components/ui/AnimatedCounter';
+import { ServiceVideos } from '../components/ui/ServiceVideos';
 
 const stats = [
   { label: 15, suffix: ' años', sublabel: 'de experiencia' },
-  { label: 100, suffix: '+', sublabel: 'clientes satisfechos' },
+  { label: 1000, suffix: '+', sublabel: 'clientes satisfechos' },
   { label: 500, suffix: '+', sublabel: 'proyectos completados' },
   { label: 24, suffix: '/7', sublabel: 'soporte técnico' },
 ];
@@ -47,7 +49,7 @@ export default function Home() {
     return new URL(`../img/cliente${index}.png`, import.meta.url).href;
   };
 
-  const clients = Array.from({ length: 11 }, (_, i) => ({ id: i + 1, image: getClientImage(i + 1) }));
+  const clients = Array.from({ length: 13 }, (_, i) => ({ id: i + 1, image: getClientImage(i + 1) }));
 
   const features = [
     { icon: Settings, title: 'Personalización', description: 'Software diseñado exactamente según tus necesidades empresariales y procesos únicos.' },
@@ -65,6 +67,7 @@ export default function Home() {
     { icon: GraduationCap, title: 'ERP Institutos Superiores', description: 'Gestión académica y administrativa completa para instituciones educativas.', benefit: 'Educación eficiente' },
     { icon: Building2, title: 'ERP Capacitaciones', description: 'Control total de cursos, alumnos, procesos y certificaciones en un solo lugar.', benefit: 'Gestión integral' },
     { icon: Factory, title: 'ERP Cacaotera', description: 'Control operativo y administrativo especializado para el sector cacaotero.', benefit: 'Sector específico' },
+    { icon: Flower, title: 'ERP Florícola', description: 'Solución integral para la gestión técnica, administrativa y comercial de florícolas.', benefit: 'Gestión técnica' },
     { icon: Receipt, title: 'ZUIPAY Facturación', description: 'Emisión y gestión de comprobantes electrónicos con cumplimiento fiscal total.', benefit: 'Facturación legal' },
     { icon: Database, title: 'Sistema Contable', description: 'Control contable y financiero completo con reportes en tiempo real.', benefit: 'Control financiero' },
   ];
@@ -460,6 +463,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      
+      <ServiceVideos />
 
       {/* Clients Section */}
       <section className="py-24 relative overflow-hidden">
@@ -486,7 +491,7 @@ export default function Home() {
             variants={container}
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 bg-[#ADD8E6]/10 border border-[#ADD8E6]/20 rounded-full mb-4">
-              <span className="text-[#ADD8E6] text-sm font-medium">+11 empresas confían en nosotros</span>
+              <span className="text-[#ADD8E6] text-sm font-medium">+150 empresas confían en nosotros</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold text-[#EAF2FF] mb-4">
               Empresas que impulsan su crecimiento
@@ -559,7 +564,7 @@ export default function Home() {
           >
             <div className="inline-flex items-center justify-center gap-8 px-8 py-6 bg-gradient-to-r from-[#ADD8E6]/12 to-[#00AEEF]/12 border border-[#ADD8E6]/35 rounded-2xl">
               <div className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-[#ADD8E6] mb-1">11+</p>
+                <p className="text-4xl md:text-5xl font-bold text-[#ADD8E6] mb-1">150+</p>
                 <p className="text-[#AFC3E0]">Empresas confían</p>
               </div>
               <div className="w-px h-12 bg-gradient-to-b from-transparent via-[#ADD8E6]/30 to-transparent" />

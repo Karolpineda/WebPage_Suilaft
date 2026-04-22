@@ -116,17 +116,22 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-[#AFC3E0] text-sm">Email</p>
-                  <a href="mailto:info@Suilaft.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
-                    info@Suilaft.com
-                  </a>
+                  <div className="flex flex-col">
+                    <a href="mailto:gcomercial@grupoconsulteg.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
+                      gcomercial@grupoconsulteg.com
+                    </a>
+                    <a href="mailto:contacto@consultegcap.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
+                      contacto@consultegcap.com
+                    </a>
+                  </div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-[#AFC3E0] text-sm">Teléfono</p>
-                  <a href="tel:+1234567890" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:+593985441176" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
+                    +593 985 441 176
                   </a>
                 </div>
               </li>
@@ -135,7 +140,7 @@ export function Footer() {
                 <div>
                   <p className="text-[#AFC3E0] text-sm">Ubicación</p>
                   <p className="text-[#EAF2FF] text-sm">
-                    Ciudad, País
+                    Quito, El Tiempo y El Comercio, Edificio El Tiempo N37-83, piso 8
                   </p>
                 </div>
               </li>

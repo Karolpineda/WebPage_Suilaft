@@ -33,12 +33,12 @@ const fadeRight = {
 const services = [
   'SUILAFT Full', 'SUILAFT Risk', 'SUILAFT Debidas Diligencias',
   'ERP para Institutos Superiores', 'ERP para Capacitaciones',
-  'ERP para Cacaotera', 'ZUIPAY Facturación Electrónica',
+  'ERP para Cacaotera', 'ERP para Florícola', 'ZUIPAY Facturación Electrónica',
   'Sistema Contable', 'Desarrollo a Medida', 'Consultoría Tecnológica', 'Otro'
 ];
 
 const stats = [
-  { icon: Clock, label: 'Tiempo de respuesta', value: 2, suffix: 'h', color: '#00AEEF', isCounter: true },
+  { icon: Clock, label: 'Tiempo de respuesta', value: 1, suffix: 'h', color: '#00AEEF', isCounter: true },
   { icon: Users, label: 'Clientes satisfechos', value: 150, suffix: '+', color: '#1E4ED8', isCounter: true },
   { icon: CheckCircle, label: 'Satisfacción', value: 98, suffix: '%', color: '#10B981', isCounter: true },
   { icon: Zap, label: 'Soporte técnico', value: 24, suffix: '/7', color: '#F59E0B', isCounter: true },
@@ -60,7 +60,7 @@ const socialLinks = [
 
 const reasons = [
   { icon: HeadphonesIcon, title: 'Atención personalizada', desc: 'Un ejecutivo dedicado te acompaña desde el primer contacto hasta la implementación.', color: '#00AEEF' },
-  { icon: Zap, title: 'Respuesta rápida', desc: 'Respondemos en menos de 2 horas en días hábiles. Tu tiempo es valioso.', color: '#1E4ED8' },
+  { icon: Zap, title: 'Respuesta rápida', desc: 'Respondemos de manera inmediata. Tu tiempo es valioso.', color: '#1E4ED8' },
   { icon: Calendar, title: 'Demo sin compromiso', desc: 'Agenda una demostración gratuita y conoce cómo nuestra solución se adapta a ti.', color: '#10B981' },
 ];
 
@@ -250,9 +250,12 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-[#EAF2FF] mb-6">Información de Contacto</h2>
                 <div className="space-y-5">
                   {[
-                    { icon: Mail, title: 'Email', lines: [{ text: 'info@Suilaft.com', href: 'mailto:info@Suilaft.com' }, { text: 'ventas@Suilaft.com', href: 'mailto:ventas@Suilaft.com' }] },
-                    { icon: Phone, title: 'Teléfono', lines: [{ text: '+1 (234) 567-890', href: 'tel:+1234567890' }, { text: '+1 (234) 567-891', href: 'tel:+1234567891' }] },
-                    { icon: MapPin, title: 'Ubicación', lines: [{ text: 'Av. Principal 123, Edificio Corporativo, Ciudad, País', href: null }] },
+                    { icon: Mail, title: 'Email', lines: [
+                      { text: 'gcomercial@grupoconsulteg.com', href: 'mailto:gcomercial@grupoconsulteg.com' },
+                      { text: 'contacto@consultegcap.com', href: 'mailto:contacto@consultegcap.com' }
+                    ] },
+                    { icon: Phone, title: 'Teléfono', lines: [{ text: '+593 985 441 176', href: 'tel:+593985441176' }] },
+                    { icon: MapPin, title: 'Ubicación', lines: [{ text: 'Quito, El Tiempo y El Comercio, Edificio El Tiempo N37-83, piso 8', href: null }] },
                   ].map(({ icon: Icon, title, lines }, i) => (
                     <motion.div
                       key={title}
@@ -313,7 +316,7 @@ export default function Contact() {
 
               {/* WhatsApp */}
               <motion.a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/593985441176"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative flex items-center justify-center gap-3 w-full bg-[#25D366] text-white font-semibold py-4 rounded-xl overflow-hidden group"

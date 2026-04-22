@@ -12,7 +12,8 @@ import {
   Code,
   ArrowRight,
   Sparkles,
-  CheckCircle2
+  CheckCircle2,
+  Flower
 } from 'lucide-react';
 import { ProductCard } from '../components/ui/ProductCard';
 import { Button } from '../components/ui/Button';
@@ -44,8 +45,9 @@ const solutions = [
     color: '#1E4ED8',
     products: [
       { icon: GraduationCap, title: 'ERP para Institutos Superiores', description: 'Gestión académica y administrativa completa: matrículas, horarios, calificaciones, finanzas, RRHH, bibliotecas y portales para estudiantes y docentes.', benefit: 'Educación eficiente' },
-      { icon: Building2, title: 'ERP para Capacitaciones', description: 'Control total de cursos, alumnos, instructores, certificaciones, pagos y reportes. Incluye plataforma LMS integrada y emisión automática de certificados.', benefit: 'Gestión integral' },
+      { icon: Building2, title: 'ERP para Capacitaciones', description: 'Control total de cursos, alumnos, instructors, certificaciones, pagos y reportes. Incluye plataforma LMS integrada y emisión automática de certificados.', benefit: 'Gestión integral' },
       { icon: Factory, title: 'ERP para Cacaotera', description: 'Control operativo y administrativo especializado para el sector cacaotero: trazabilidad, control de calidad, logística, compras, ventas y gestión de productores.', benefit: 'Sector específico' },
+      { icon: Flower, title: 'ERP para Florícola', description: 'Sistema especializado para florícolas: gestión de cultivos, post-cosecha, control de inventario, exportaciones, nómina técnica y facturación electrónica.', benefit: 'Gestión técnica' },
     ]
   },
   {
