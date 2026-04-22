@@ -587,8 +587,8 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ type: 'spring', stiffness: 80, damping: 22 }}
           >
-            <div className="absolute inset-0 opacity-8">
-              <div className="absolute inset-0" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute inset-0" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(0,174,239,0.8) 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
             </div>
 
             <motion.div

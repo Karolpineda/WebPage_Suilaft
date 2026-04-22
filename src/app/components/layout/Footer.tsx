@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Music2 } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,35 +11,30 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#00AEEF] to-[#1E4ED8] flex items-center justify-center">
-                <span className="text-[#0A1020] font-bold text-xl">M</span>
+              <div className="w-24 h-24 flex items-center justify-center">
+                <img 
+                  src="/logo-suilaft.png" 
+                  alt="Suilaft Logo" 
+                  className="w-full h-full object-contain filter brightness-110"
+                />
               </div>
               <div>
                 <span className="text-xl font-bold text-[#EAF2FF]">Suilaft</span>
-                <p className="text-xs text-[#AFC3E0] -mt-0.5">by Grupo Consulteg</p>
+                <p className="text-[10px] text-[#AFC3E0] -mt-1 uppercase tracking-widest font-medium opacity-80">by Grupo Consulteg</p>
               </div>
             </div>
             <p className="text-[#AFC3E0] text-sm leading-relaxed mb-6">
               Soluciones tecnológicas innovadoras con 15 años de experiencia. Transformamos empresas con software a medida.
             </p>
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-[#223252] flex items-center justify-center text-[#AFC3E0] hover:bg-[#00AEEF] hover:text-[#0A1020] transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
+              <a href="https://www.linkedin.com/company/suilaft/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#EAF2FF]/5 border border-[#EAF2FF]/10 flex items-center justify-center text-[#AFC3E0] hover:bg-[#00AEEF] hover:text-white hover:border-[#00AEEF] transition-all duration-300">
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-[#223252] flex items-center justify-center text-[#AFC3E0] hover:bg-[#00AEEF] hover:text-[#0A1020] transition-colors"
-              >
-                <Twitter className="w-4 h-4" />
+              <a href="https://www.instagram.com/suilaft.ec" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#EAF2FF]/5 border border-[#EAF2FF]/10 flex items-center justify-center text-[#AFC3E0] hover:bg-[#00AEEF] hover:text-white hover:border-[#00AEEF] transition-all duration-300">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-[#223252] flex items-center justify-center text-[#AFC3E0] hover:bg-[#00AEEF] hover:text-[#0A1020] transition-colors"
-              >
-                <Facebook className="w-4 h-4" />
+              <a href="https://www.tiktok.com/@suilaft.ec" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#EAF2FF]/5 border border-[#EAF2FF]/10 flex items-center justify-center text-[#AFC3E0] hover:bg-[#00AEEF] hover:text-white hover:border-[#00AEEF] transition-all duration-300">
+                <Music2 className="w-5 h-5" />
               </a>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   MapPin, Phone, Mail, Send, MessageSquare, Clock,
   CheckCircle, Users, Zap, ChevronDown, ChevronUp,
-  Linkedin, Twitter, Instagram, Globe, HeadphonesIcon, Calendar
+  Linkedin, Music2, Instagram, HeadphonesIcon, Calendar
 } from 'lucide-react';
 import { Input } from '../components/ui/Input';
 import { Textarea } from '../components/ui/Textarea';
@@ -52,10 +52,9 @@ const faqs = [
 ];
 
 const socialLinks = [
-  { icon: Linkedin, label: 'LinkedIn', href: '#', color: '#0A66C2' },
-  { icon: Twitter, label: 'Twitter / X', href: '#', color: '#1DA1F2' },
-  { icon: Instagram, label: 'Instagram', href: '#', color: '#E1306C' },
-  { icon: Globe, label: 'Web', href: '#', color: '#00AEEF' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/suilaft/', color: '#0A66C2' },
+  { icon: Music2, label: 'TikTok', href: 'https://www.tiktok.com/@suilaft.ec', color: '#00AEEF' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/suilaft.ec', color: '#E1306C' },
 ];
 
 const reasons = [
@@ -592,14 +591,18 @@ export default function Contact() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <Button variant="primary" size="lg">
-                  <Calendar className="w-5 h-5" />
-                  Agendar reunión
-                </Button>
-                <Button variant="secondary" size="lg">
-                  <MapPin className="w-5 h-5" />
-                  Ver mapa de ubicación
-                </Button>
+                <a href="https://wa.me/593985441176?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20con%20el%20equipo%20de%20Suilaft." target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" size="lg">
+                    <Calendar className="w-5 h-5" />
+                    Agendar reunión
+                  </Button>
+                </a>
+                <a href="https://maps.app.goo.gl/2ptpWc1hpU6yxewY9" target="_blank" rel="noopener noreferrer">
+                  <Button variant="secondary" size="lg">
+                    <MapPin className="w-5 h-5" />
+                    Ver mapa de ubicación
+                  </Button>
+                </a>
               </motion.div>
             </div>
           </motion.div>

@@ -23,10 +23,10 @@ export default function SplashScreen() {
     
     setParticles(newParticles);
 
-    // Ocultar splash screen después de toda la animación (6 segundos para ser más fluida)
+    // Ocultar splash screen después de toda la animación (4.5 segundos)
     const timer = setTimeout(() => {
       setIsHidden(true);
-    }, 6000);
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +35,7 @@ export default function SplashScreen() {
 
   return (
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#001533] overflow-hidden" 
-         style={{ animation: 'fadeOutSplash 0.8s ease-in-out 5.2s forwards' }}>
+         style={{ animation: 'fadeOutSplash 0.6s ease-in-out 3.9s forwards' }}>
       
       {/* Filtro para crear el efecto "Gooey" / Fusión de partículas (cuando se juntan, parecen líquido o plasma) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ filter: 'url(#goo)' }}>

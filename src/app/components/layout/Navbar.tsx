@@ -37,23 +37,17 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#00AEEF] to-[#1E4ED8] flex items-center justify-center group-hover:scale-105 transition-transform">
-                {/* Sello/escudo blanco */}
-                <svg width="20" height="22" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M 50 115 C 20 95 10 55 10 15 C 25 15 35 10 50 2 V 115 Z" fill="white" />
-                  <g stroke="white" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M 60 25 L 75 25 M 82 25 L 88 25" />
-                    <path d="M 58 42 L 95 42" />
-                    <path d="M 66 59 L 90 59" />
-                    <path d="M 58 76 L 96 76" />
-                  </g>
-                </svg>
+              <div className="w-20 h-20 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                <img 
+                  src="/logo-suilaft.png" 
+                  alt="Suilaft Logo" 
+                  className="w-full h-full object-contain filter brightness-110"
+                />
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-[#00AEEF]/20 to-[#1E4ED8]/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
             </div>
-            <div>
+            <div className="hidden sm:block">
               <span className="text-2xl font-bold text-[#EAF2FF] tracking-tight">Suilaft</span>
-              <p className="text-xs text-[#AFC3E0] -mt-1">powered by Grupo Consulteg</p>
+              <p className="text-[10px] text-[#AFC3E0] -mt-1 uppercase tracking-widest font-medium opacity-80">by Grupo Consulteg</p>
             </div>
           </Link>
 
