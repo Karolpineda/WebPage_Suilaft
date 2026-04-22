@@ -34,19 +34,16 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
     const onTimeUpdate = () => {
       if (video.duration) setProgress((video.currentTime / video.duration) * 100);
     };
     const onWaiting = () => setIsBuffering(true);
     const onPlaying = () => setIsBuffering(false);
     const onEnded = () => setIsPlaying(false);
-
     video.addEventListener('timeupdate', onTimeUpdate);
     video.addEventListener('waiting', onWaiting);
     video.addEventListener('playing', onPlaying);
     video.addEventListener('ended', onEnded);
-
     return () => {
       video.removeEventListener('timeupdate', onTimeUpdate);
       video.removeEventListener('waiting', onWaiting);
@@ -57,13 +54,9 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      {/* Phone Mockup */}
-      <div className="relative w-[200px] h-[410px] md:w-[240px] md:h-[490px] bg-[#0A1020] rounded-[2rem] border-[4px] border-[#223252] shadow-[0_0_30px_rgba(0,174,239,0.15)] overflow-hidden group">
-
-        {/* Notch */}
+      <div className="relative w-[220px] h-[450px] bg-[#0A1020] rounded-[2rem] border-[4px] border-[#223252] shadow-[0_0_30px_rgba(0,174,239,0.15)] overflow-hidden group">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-[#223252] rounded-b-lg z-20" />
 
-        {/* Video */}
         <div className="absolute inset-0 z-10 cursor-pointer" onClick={togglePlay}>
           <video
             ref={videoRef}
@@ -76,14 +69,12 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
             style={{ backfaceVisibility: 'hidden' }}
           />
 
-          {/* Buffering spinner */}
           {isBuffering && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/20 z-20">
               <div className="w-8 h-8 border-2 border-[#00AEEF] border-t-transparent rounded-full animate-spin" />
             </div>
           )}
 
-          {/* Play overlay */}
           {!isPlaying && !isBuffering && (
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <div className="w-14 h-14 bg-[#00AEEF] text-white rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-200">
@@ -92,7 +83,6 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
             </div>
           )}
 
-          {/* Pause on hover while playing */}
           {isPlaying && (
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center bg-black/10">
               <div className="w-12 h-12 bg-black/50 backdrop-blur-sm text-white rounded-full flex items-center justify-center">
@@ -101,7 +91,6 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
             </div>
           )}
 
-          {/* Audio toggle */}
           <button
             onClick={toggleMute}
             title={isMuted ? 'Activar audio' : 'Silenciar'}
@@ -111,22 +100,19 @@ function PhoneVideo({ title, videoUrl }: VideoProps) {
           </button>
         </div>
 
-        {/* Progress bar */}
         <div className="absolute bottom-0 left-0 right-0 z-20 h-1.5 bg-white/10">
-          <div
-            className="h-full bg-[#00AEEF] transition-all duration-150"
-            style={{ width: `${progress}%` }}
-          />
+          <div className="h-full bg-[#00AEEF] transition-all duration-150" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
-      {/* Label */}
       <p className="text-[#EAF2FF] text-sm font-semibold text-center tracking-wide">{title}</p>
     </div>
   );
 }
 
 export function ServiceVideos() {
+  const [activeTab, setActiveTab] = useState(0);
+
   const serviceVideos = [
     {
       title: 'Facturación Rápida',
@@ -141,7 +127,7 @@ export function ServiceVideos() {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
 
           {/* Left: Description */}
           <motion.div
@@ -184,23 +170,46 @@ export function ServiceVideos() {
             </p>
           </motion.div>
 
-          {/* Right: Videos side by side */}
+          {/* Right: Videos */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex-shrink-0 flex items-end gap-6 md:gap-10"
+            className="flex-shrink-0 flex flex-col items-center gap-5 w-full lg:w-auto"
           >
-            {serviceVideos.map((video, index) => (
-              <PhoneVideo key={index} {...video} />
-            ))}
+            {/* Mobile: tab selector — one video at a time */}
+            <div className="flex lg:hidden gap-3">
+              {serviceVideos.map((v, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveTab(i)}
+                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${
+                    activeTab === i
+                      ? 'bg-[#00AEEF] text-[#0A1020] border-[#00AEEF]'
+                      : 'bg-transparent text-[#AFC3E0] border-[#223252] hover:border-[#00AEEF]/50'
+                  }`}
+                >
+                  {v.title}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex lg:hidden justify-center">
+              <PhoneVideo key={activeTab} {...serviceVideos[activeTab]} />
+            </div>
+
+            {/* Desktop: both side by side */}
+            <div className="hidden lg:flex items-end gap-10">
+              {serviceVideos.map((video, index) => (
+                <PhoneVideo key={index} {...video} />
+              ))}
+            </div>
           </motion.div>
 
         </div>
       </div>
 
-      {/* Background glow */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#00AEEF]/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
     </section>
   );
