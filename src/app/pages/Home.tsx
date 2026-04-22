@@ -64,7 +64,7 @@ export default function Home() {
     { icon: Shield, title: 'SUILAFT Full', description: 'Solución integral de compliance y prevención de lavado de activos con monitoreo continuo.', benefit: 'Cumplimiento total' },
     { icon: BarChart3, title: 'SUILAFT Risk', description: 'Sistema especializado en gestión y análisis de riesgos financieros y operacionales.', benefit: 'Gestión de riesgos' },
     { icon: FileCheck, title: 'SUILAFT Debidas Diligencias', description: 'Validación exhaustiva y análisis de contrapartes con IA para toma de decisiones.', benefit: 'Validación inteligente' },
-    { icon: GraduationCap, title: 'ERP Institutos Superiores', description: 'Gestión académica y administrativa completa para instituciones educativas.', benefit: 'Educación eficiente' },
+    { icon: GraduationCap, title: 'ERP Instituciones Superiores ', description: 'Gestión administrativa y financiera completa para instituciones educativas.', benefit: 'Educación eficiente' },
     { icon: Building2, title: 'ERP Capacitaciones', description: 'Control total de cursos, alumnos, procesos y certificaciones en un solo lugar.', benefit: 'Gestión integral' },
     { icon: Factory, title: 'ERP Cacaotera', description: 'Control operativo y administrativo especializado para el sector cacaotero.', benefit: 'Sector específico' },
     { icon: Flower, title: 'ERP Florícola', description: 'Solución integral para la gestión técnica, administrativa y comercial de florícolas.', benefit: 'Gestión técnica' },
@@ -463,7 +463,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      
+
       <ServiceVideos />
 
       {/* Clients Section */}

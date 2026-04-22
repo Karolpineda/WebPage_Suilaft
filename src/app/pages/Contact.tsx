@@ -250,8 +250,8 @@ export default function Contact() {
                 <div className="space-y-5">
                   {[
                     { icon: Mail, title: 'Email', lines: [
-                      { text: 'gcomercial@grupoconsulteg.com', href: 'mailto:gcomercial@grupoconsulteg.com' },
-                      { text: 'contacto@consultegcap.com', href: 'mailto:contacto@consultegcap.com' }
+                      { text: 'comercial@suilaft.com', href: 'mailto:comercial@suilaft.com' },
+                      { text: 'mb@suilaft.com', href: 'mailto:mb@suilaft.com' }
                     ] },
                     { icon: Phone, title: 'Teléfono', lines: [{ text: '+593 985 441 176', href: 'tel:+593985441176' }] },
                     { icon: MapPin, title: 'Ubicación', lines: [{ text: 'Quito, El Tiempo y El Comercio, Edificio El Tiempo N37-83, piso 8', href: null }] },

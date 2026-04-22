@@ -112,11 +112,11 @@ export function Footer() {
                 <div>
                   <p className="text-[#AFC3E0] text-sm">Email</p>
                   <div className="flex flex-col">
-                    <a href="mailto:gcomercial@grupoconsulteg.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
-                      gcomercial@grupoconsulteg.com
+                    <a href="mailto:comercial@suilaft.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
+                      comercial@suilaft.com
                     </a>
-                    <a href="mailto:contacto@consultegcap.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
-                      contacto@consultegcap.com
+                    <a href="mailto:mb@suilaft.com" className="text-[#EAF2FF] text-sm hover:text-[#00AEEF] transition-colors">
+                      mb@suilaft.com
                     </a>
                   </div>
                 </div>
