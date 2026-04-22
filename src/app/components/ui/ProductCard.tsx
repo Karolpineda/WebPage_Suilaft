@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
 import { LucideIcon } from 'lucide-react';
+import { Link } from 'react-router';
 
 interface ProductCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
   benefit: string;
-  onLearnMore?: () => void;
+  onLearnMore?: string;
 }
 
 export function ProductCard({ icon: Icon, title, description, benefit, onLearnMore }: ProductCardProps) {
@@ -31,20 +31,22 @@ export function ProductCard({ icon: Icon, title, description, benefit, onLearnMo
         
         {/* CTA */}
         {onLearnMore && (
-          <button
-            onClick={onLearnMore}
-            className="text-[#00AEEF] hover:text-[#33C3FF] font-medium text-sm flex items-center gap-2 group/btn"
-          >
-            Solicitar información
-            <svg
-              className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="pt-2">
+            <Link
+              to={onLearnMore}
+              className="text-[#00AEEF] hover:text-[#33C3FF] font-medium text-sm flex items-center gap-2 group/btn inline-flex"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+              Solicitar información
+              <svg
+                className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         )}
       </div>
     </div>

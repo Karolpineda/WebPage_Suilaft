@@ -228,7 +228,7 @@ export default function Solutions() {
                         title={product.title}
                         description={product.description}
                         benefit={product.benefit}
-                        onLearnMore={() => navigate('/contacto')}
+                        onLearnMore="/contacto"
                       />
                     </motion.div>
                   ))}

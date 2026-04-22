@@ -265,7 +265,7 @@ export default function Home() {
                   title={product.title}
                   description={product.description}
                   benefit={product.benefit}
-                  onLearnMore={() => window.location.href = '/contacto'}
+                  onLearnMore="/contacto"
                 />
               </motion.div>
             ))}
