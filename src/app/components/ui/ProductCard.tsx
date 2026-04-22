@@ -12,8 +12,6 @@ interface ProductCardProps {
 export function ProductCard({ icon: Icon, title, description, benefit, onLearnMore }: ProductCardProps) {
   return (
     <div className="group relative bg-[#101A33] border border-[#223252] rounded-2xl p-6 hover:border-[#00AEEF]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#00AEEF]/10 hover:-translate-y-1">
-      {/* Glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00AEEF]/0 via-[#00AEEF]/0 to-[#00AEEF]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
       <div className="relative z-10">
         {/* Icon */}
